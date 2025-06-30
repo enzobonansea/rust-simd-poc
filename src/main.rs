@@ -32,7 +32,7 @@ fn main() {
         let max_diff = (results.scalar_mean - results.simd_mean).abs()
             .max((results.scalar_mean - results.chunk_mean).abs());
         
-        println!("{:<12} {:<15} {:<15} {:<15} {:<12.2}x {:<12.2}x {:<12.2e}", 
+        println!("{:<12} {:<15} {:<15} {:<15}x {:<12.2}x {:<12.2}x {:<12.2e}", 
             format_size(size),
             scalar_ns as u64,
             simd_ns as u64,
